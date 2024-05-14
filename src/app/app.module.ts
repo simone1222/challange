@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListaFilmComponent } from './components/lista-film/lista-film.component';
+import { ProgrammazioneFilmComponent } from './components/programmazione-film/programmazione-film.component';
+import { StoricoFilmComponent } from './components/storico-film/storico-film.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatTabsModule } from '@angular/material/tabs';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ListaFilmComponent,
+    ProgrammazioneFilmComponent,
+    StoricoFilmComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
