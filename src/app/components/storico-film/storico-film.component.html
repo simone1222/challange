@@ -1,1 +1,29 @@
-<p>storico-film works!</p>
+<table class="film-table">
+    <thead>
+      <tr>
+        <th>Titolo</th>
+        <th>Regista</th>
+        <th>Data inizio</th>
+        <th>Data fine</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let film of filmsInProgrammazione">
+        <tr>
+          <td>
+            <div>{{ film.titolo }}</div>
+          </td>
+          <td>
+            <div>{{ film.regista }}</div>
+          </td>
+          <td>
+            <div>{{ film.dataInizio }}</div>
+          </td>
+          <td>
+            <div>{{ film.dataFine }}</div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  

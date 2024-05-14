@@ -8,6 +8,8 @@ import { ProgrammazioneFilmComponent } from './components/programmazione-film/pr
 import { StoricoFilmComponent } from './components/storico-film/storico-film.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material/tabs';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -22,6 +24,7 @@ import { MatTabsModule } from '@angular/material/tabs';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatTabsModule
   ],
   providers: [],

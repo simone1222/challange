@@ -1,0 +1,25 @@
+/* Stile per la tabella */
+.film-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  /* Stile per l'intestazione della tabella */
+  .film-table thead th {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  /* Stile per le celle della tabella */
+  .film-table tbody td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  /* Stile per i div all'interno delle celle */
+  .film-table tbody td div {
+    margin-bottom: 5px; /* Spazio tra le righe all'interno della cella */
+  }
+  
