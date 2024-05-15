@@ -9,15 +9,34 @@ import { FilmService } from 'src/app/services/film.service';
 })
 export class StoricoFilmComponent implements OnInit {
 
-  filmsInProgrammazione: FilmPayload[] = [];
+  filmStorico: FilmPayload[] = [];
+  dataInizio!: string;
+  dataFine!: string;
 
   constructor(private filmService:FilmService){}
 
   ngOnInit(): void {
+  this.listaStoricoFilm();
+  } 
+
+  listaStoricoFilm(){
     this.filmService.getListaFilmStorico().subscribe((film)=>{
-      this.filmsInProgrammazione = film;
+      this.filmStorico = film;
       console.log(film)
     })
-  } 
+  }
+
+  cercaPerData(): void {
+    if (this.dataInizio && this.dataFine) {
+      this.filmService.filterFilmData(this.dataInizio, this.dataFine).subscribe(films => {
+        this.filmStorico = films;
+      });
+    }
+  }
+  reset(){
+    this.listaStoricoFilm();
+    this.dataInizio = ''
+    this.dataFine = ''
+  }
 
 }
