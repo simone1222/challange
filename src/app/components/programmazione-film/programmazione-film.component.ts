@@ -22,11 +22,10 @@ export class ProgrammazioneFilmComponent implements OnInit{
   listaFilmInProgrammazione(){
     this.filmService.getListaFilmProgrammati().subscribe((film)=>{
       this.filmsInProgrammazione = film;
-      console.log(film)
     })
   }
-  cercaPerData(): void {
-    if (this.dataInizio && this.dataFine) {
+  cercaPerData() {
+    if (this.dataInizio) {
       this.filmService.filterFilmData(this.dataInizio, this.dataFine).subscribe(films => {
         this.filmsInProgrammazione = films;
       });

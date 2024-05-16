@@ -2,6 +2,7 @@
 .film-table {
     width: 100%;
     border-collapse: collapse;
+    background-color: peru;
   }
   
   /* Stile per l'intestazione della tabella */

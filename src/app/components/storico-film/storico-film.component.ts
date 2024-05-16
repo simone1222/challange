@@ -22,12 +22,11 @@ export class StoricoFilmComponent implements OnInit {
   listaStoricoFilm(){
     this.filmService.getListaFilmStorico().subscribe((film)=>{
       this.filmStorico = film;
-      console.log(film)
     })
   }
 
-  cercaPerData(): void {
-    if (this.dataInizio && this.dataFine) {
+  cercaPerData() {
+    if (this.dataInizio) {
       this.filmService.filterFilmData(this.dataInizio, this.dataFine).subscribe(films => {
         this.filmStorico = films;
       });
